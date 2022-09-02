@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Search</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+</head>
+<body>
+    <!--搜尋輸入框-->
+    <span id="searchArea">
+        <div class="input-group d-flex justify-content-center mt-5 mb-5">
+            <div class="form-outline">
+                <input type="search" id="searchByName" class="form-control" />
+                <label class="form-label" for="form1">Search by Name</label>
+            </div>
+            <button type="button" class="btn btn-primary">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </span>
+   
+
+    <!--結果顯示-->
+    <span id="resultArea">
+        <div id="searchResult"></div>
+    </span> 
+
+    <!--位置視窗-->
+    <span style="display: none;" id="locationArea">
+        <div class="d-grid mx-auto" style="position:absolute;">
+            <button type="button" class="btn btn-dark p-5 t-5 fs-1" id="closeLocationArea">返回</button>
+            <img src="./image/0.png" id="locationImage" class="img-fluid rounded"/>
+        </div>
+    </span>
+  
+
+    <!--檢查Key-->
+    <script>
+        const key = "key=GoGoGo123"
+        const url = window.location.href
+        if (url.includes(key) == false){
+            window.location.href = "https://www.google.com.tw/?hl=zh_TW";
+        }
+    </script>
+
+    <!--載入必要JS-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
+    <script src="./memberList.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
